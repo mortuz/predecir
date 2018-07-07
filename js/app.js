@@ -26,8 +26,28 @@ var chart = new Chart(ctx, {
 
     // Configuration options go here
     options: {
+        responsive: true,
         legend: {
             display: false,
+        },
+        pan: {
+            enabled: true,
+            mode: 'x',
+        },
+        zoom: {
+            enabled: true,
+            mode: 'x',
         }
     }
 });
+
+(function($) {
+    var datePickerConfig = {
+        uiLibrary: 'bootstrap4',
+        iconsLibrary: 'fontawesome',
+        // size: 'small'
+    }
+    $('#datepicker').datepicker(datePickerConfig);
+    $('#datepicker2').datepicker(datePickerConfig);
+
+})(jQuery)
